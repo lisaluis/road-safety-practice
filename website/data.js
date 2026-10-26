@@ -1,15 +1,24 @@
+// Single source of truth: every number on the page comes from here (DRY).
+const SRC = { toi: "TOI editorial “Sense & Licence”", who: "WHO, as cited in the TOI editorial", sc: "Supreme Court hearing, as cited in TOI" };
 const DATA = {
-  deathsTrend: {
-    years: [2015, 2025],
-    deaths: [146133, 183382],
-    source: "TOI editorial 'Sense & Licence'"
-  },
-  comparison: {
-    countries: ["India", "Vietnam", "Singapore"],
-    fatalityPer100k: [16.2, 13, 1.4],
-    source: "WHO figures as cited in TOI editorial 'Sense & Licence'"
-  },
-  licenceTest: { oldPass: 60, newPass: 75, vietnamPass: 91 },
-  unpaidChallans: { amount: "₹23,000 crore", source: "TOI editorial; Supreme Court hearing" },
-  perHour: 21
+  deaths: { 2015: 146133, 2025: 183382, perHour: 21, source: SRC.toi },
+  fatalityPer100k: [
+    { country: "India", value: 16.2 },
+    { country: "Vietnam", value: 13 },
+    { country: "Singapore", value: 1.4 },
+  ],
+  fatalitySource: SRC.who,
+  passMarks: [
+    { label: "India today", value: 60 },
+    { label: "India proposed", value: 75 },
+    { label: "Vietnam", value: 91 },
+  ],
+  passMarkSource: SRC.toi,
+  unpaidChallans: { crore: 23000, bmwChallans: 42, source: SRC.sc },
+  policies: [
+    { name: "E-challan recovery", text: "Link unpaid fines to licence and registration renewal so ignoring a challan has a cost." },
+    { name: "Repeat-offender suspension", text: "Escalate to suspension after repeated violations, with a fair appeal route." },
+    { name: "Enforcement technology", text: "Cameras and number-plate recognition reduce reliance on officers on the spot." },
+    { name: "Awareness and attitude", text: "Campaigns that target the assumption that every user has the right of way." },
+  ],
 };
