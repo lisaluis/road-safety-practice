@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Why Road Deaths Rise Despite Stricter Rules</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<nav><div class="wrap"><a href="#top">Overview</a><a href="#trend-s">Trend</a><a href="#compare-s">Compare</a><a href="#test">Licence test</a><a href="#gap">Enforcement gap</a><a href="#fix">What could work</a></div></nav>
+<header class="hero" id="top"><div class="wrap">
+  <h1>One death on India’s roads every three minutes.</h1>
+  <p>Each block is one person killed in the last hour: <b data-bind="perHour"></b> every hour, around the clock.</p>
+  <div class="hour" id="hour" aria-label="21 deaths per hour"></div>
+  <div class="road-line"></div>
+</div></header>
+<main>
+<section id="trend-s"><div class="wrap">
+  <h2>Deaths are rising, not falling</h2>
+  <p>Road deaths grew from <b data-bind="d2015"></b> in 2015 to <b data-bind="d2025"></b> in 2025, an increase of <b data-bind="rise"></b>, or <b data-bind="extra"></b> more lives lost each year.</p>
+  <div class="chart"><canvas id="trend" role="img" aria-label="Bar chart of road deaths in 2015 and 2025"></canvas></div>
+  <p class="src">Source: TOI editorial “Sense &amp; Licence”.</p>
+</div></section>
+<section id="compare-s"><div class="wrap">
+  <h2>India, Vietnam and Singapore</h2>
+  <p>More traffic does not have to mean more risk. Singapore has the safest roads of the three, with a fatality rate below a tenth of India’s.</p>
+  <div class="chart"><canvas id="compare" role="img" aria-label="Bar chart of fatality rates per lakh"></canvas></div>
+  <p class="src">Source: WHO, as cited in the TOI editorial.</p>
+</div></section>
+<section id="test"><div class="wrap">
+  <h2>A tougher licence test is not enough</h2>
+  <p>The government plans to raise the online safe-driving pass mark from 60% to 75%. Vietnam already demands 91% and still loses 13 people per lakh each year, so the test alone does not fix behaviour on the road.</p>
+  <div class="bars" id="passmarks"></div>
+  <p class="src">Source: TOI editorial “Sense &amp; Licence”.</p>
+</div></section>
+<section id="gap" class="gap"><div class="wrap">
+  <h2>Rules without consequences</h2>
+  <div class="big">₹<span data-bind="crore"></span> crore</div>
+  <p>in e-challans remain unpaid across states. One Delhi-registered BMW has <b data-bind="bmw"></b> challans for driving without a pollution certificate. When violators know the law will look away, attitudes do not change.</p>
+  <p class="src" style="color:#9fb0bf">Source: Supreme Court hearing and TOI report, as cited in the editorial.</p>
+</div></section>
+<section id="fix"><div class="wrap">
+  <h2>What could work</h2>
+  <p>The editorial calls for attitudinal change backed by strict enforcement. These four options are explored with trade-offs in the policy agent.</p>
+  <div class="cols" id="policies"></div>
+</div></section>
+</main>
+<footer><div class="wrap">Built for the Open Book Lab Exam, Assignment A. All figures come from the TOI editorial “Sense &amp; Licence”, which cites WHO and the Supreme Court. Verify before citing elsewhere.</div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="data.js"></script><script src="app.js"></script>
+</body></html>
