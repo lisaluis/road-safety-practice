@@ -1,0 +1,15 @@
+:root {
+  --bg: #f7f7f5;
+  --text: #1b1b1b;
+  --accent: #c0392b;
+  --card: #ffffff;
+  --space: 1.25rem;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+.hero { background: var(--accent); color: #fff; text-align: center; padding: 3rem var(--space); }
+.big { font-size: 3rem; font-weight: 700; margin: 0; color: var(--accent); }
+.hero .big { color: #fff; }
+main { max-width: 800px; margin: 0 auto; padding: var(--space); }
+section { background: var(--card); padding: var(--space); margin-bottom: var(--space); border-radius: 8px; }
+.source { font-size: 0.8rem; color: #666; }
