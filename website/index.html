@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Road Safety in India</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>Road Safety in India</h1>
+    <p class="big" id="perHour"></p>
+    <p>people die on Indian roads every hour</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. The trend</h2>
+      <canvas id="trendChart"></canvas>
+      <p class="source" id="trendSource"></p>
+    </section>
+
+    <section>
+      <h2>2. India vs Vietnam vs Singapore</h2>
+      <canvas id="compareChart"></canvas>
+      <p class="source" id="compareSource"></p>
+    </section>
+
+    <section>
+      <h2>3. The licence test debate</h2>
+      <p id="licenceText"></p>
+    </section>
+
+    <section>
+      <h2>4. The enforcement gap</h2>
+      <p class="big" id="challanAmount"></p>
+      <p>in unpaid e-challans. Rules matter only if they are enforced.</p>
+      <p class="source" id="challanSource"></p>
+    </section>
+
+    <section>
+      <h2>5. Causes and what could work</h2>
+      <ul>
+        <li>Weak enforcement and unpaid fines</li>
+        <li>Repeat offenders keep their licences</li>
+        <li>Driver attitude and behaviour</li>
+        <li>Possible fixes: link fines to licence renewal, suspend repeat offenders, use cameras, run awareness campaigns</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
